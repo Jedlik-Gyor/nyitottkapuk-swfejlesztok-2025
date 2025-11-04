@@ -1,0 +1,18 @@
+name: kubectl test
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  kubectl-test:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2  
+
+    - name: run kubectl apply
+      run: |
+        kubectl apply -f k8s/nyitottkapuk-swdev-2026-deployment.yaml
+        echo ${{ secrets.KUBECONFIG }} > ~/.kube/config
+        kubectl apply -f k8s/nyitottkapuk-swdev-2026-deployment.yaml
