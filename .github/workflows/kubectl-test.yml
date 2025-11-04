@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2  
 
-    - name: run kubectl apply
+    - name: set up kubectl
       run: |
         kubectl apply -f k8s/nyitottkapuk-swdev-2026-deployment.yaml
         echo ${{ secrets.KUBECONFIG }} > ~/.kube/config
@@ -22,4 +22,7 @@ jobs:
           echo "::group::kube config tartalma"
           cat ~/.kube/config
           echo "::endgroup::"
+    
+    - name: run kubectl apply
+      run: |
         kubectl apply -f k8s/nyitottkapuk-swdev-2026-deployment.yaml
