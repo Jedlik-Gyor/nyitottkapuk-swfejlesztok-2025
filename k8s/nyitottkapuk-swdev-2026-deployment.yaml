@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nyitottkapuk-swdev-2026-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: nyitottkapuk-swdev-2026
+  template:
+    metadata:
+      labels:
+        component: nyitottkapuk-swdev-2026
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:0.0.1
+          imagePullPolicy: Always
+          env:      
+          - name: virtualdirectory
+            value: ""          
+          ports:
+            - containerPort: 3000            
+      imagePullSecrets:
+        - name: jedlik-gyor-ghcr-io-registry-secret
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nyitottkapuk-swdev-2026-cluster-ip-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 3000
+  selector:
+    component: nyitottkapuk-swdev-2026
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nyitottkapuk-swdev-2026-ingress-service
+  annotations:
+    kubernetes.io/ingress.class: 'nginx'
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    cert-manager.io/cluster-issuer: 'letsencrypt-prod'
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    
+spec:
+  tls:
+    - hosts:
+        - nyitottkapuk2026.jedlik.cloud
+      secretName: bp-jedlik-cloud
+  rules:
+    - host: nyitottkapuk2026.jedlik.cloud
+      http:
+        paths:
+          - path: /?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: nyitottkapuk-swdev-2026-cluster-ip-service
+                port:
+                  number: 80
