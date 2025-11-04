@@ -13,7 +13,7 @@ jobs:
 
     - name: set up kubectl
       run: |
-        echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
+        echo "${{ secrets.KUBECONFIG_CONTENT_BASE64 }}" | base64 --decode > ~/.kube/config
         kubectl config get-contexts
         kubectl config current-context
         kubectl cluster-info
