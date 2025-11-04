@@ -13,7 +13,7 @@ type Size = {
 
 const sizes: Size[] = [
   { width: 500, height: 300, text: "", text2: "" },
-  { width: 300, height: 500, text: "Szoftverfejlesztő", text2: `és tesztelő - ${new Date().getFullYear() + 1}` },
+  { width: 300, height: 500, text: "Szoftverfejlesztő", text2: `és tesztelő - ${new Date().getFullYear()}` },
   { width: 500, height: 500, text: "", text2: "" },
 ];
 
