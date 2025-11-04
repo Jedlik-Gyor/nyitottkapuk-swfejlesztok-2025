@@ -42,9 +42,8 @@ jobs:
         password: ${{ secrets.GHCR_TOKEN }}          
 
     - name: Build the Docker image
-      working-directory: front-end
       run: |
-        docker build . --file ./Dockerfile -t ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:${{steps.get-version.outputs.current-version}} -t ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:latest 
+        docker build . -t ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:${{steps.get-version.outputs.current-version}} -t ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:latest 
         docker push ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:latest
         docker push ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:${{steps.get-version.outputs.current-version}}        
 
