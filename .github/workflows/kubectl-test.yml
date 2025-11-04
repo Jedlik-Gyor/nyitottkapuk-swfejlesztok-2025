@@ -13,6 +13,7 @@ jobs:
 
     - name: set up kubectl
       run: |
+        mkdir -p ~/.kube
         echo "${{ secrets.KUBECONFIG_CONTENT_BASE64 }}" | base64 -d > ~/.kube/config  
 
     - name: check kubectl
