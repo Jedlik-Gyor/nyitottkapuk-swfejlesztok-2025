@@ -13,15 +13,9 @@ jobs:
 
     - name: set up kubectl
       run: |
-        kubectl apply -f k8s/nyitottkapuk-swdev-2026-deployment.yaml
-        echo ${{ secrets.KUBECONFIG }} > ~/.kube/config
-        echo "::group::kubectl cluster-info"
-          kubectl cluster-info
-          echo "::endgroup::"
-        run: |
-          echo "::group::kube config tartalma"
-          cat ~/.kube/config
-          echo "::endgroup::"
+        echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
+        kubectl cluster-info
+        cat ~/.kube/config
     
     - name: run kubectl apply
       run: |
