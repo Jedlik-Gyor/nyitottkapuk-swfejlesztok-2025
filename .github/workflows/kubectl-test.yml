@@ -13,17 +13,7 @@ jobs:
 
     - name: set up kubectl
       run: |
-        mkdir -p ~/.kube
-        python3 - <<'EOF'
-        import base64, os
-        data = os.environ["KUBECONFIG_CONTENT_BASE64"]
-        decoded = base64.b64decode(data)
-        with open(os.path.expanduser("~/.kube/config"), "wb") as f:
-            f.write(decoded)
-        EOF
-        chmod 600 ~/.kube/config
-        env:
-            KUBECONFIG_CONTENT_BASE64: ${{ secrets.KUBECONFIG_CONTENT_BASE64 }}
+        echo "${{ secrets.KUBECONFIG_CONTENT_BASE64 }}" | base64 -d > ~/.kube/config  
 
     - name: check kubectl
       run: |
