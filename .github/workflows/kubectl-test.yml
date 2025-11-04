@@ -13,9 +13,20 @@ jobs:
 
     - name: set up kubectl
       run: |
+<<<<<<< HEAD
         echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
         kubectl cluster-info
         cat ~/.kube/config
+=======
+        echo ${{ secrets.KUBECONFIG }} > ~/.kube/config
+        echo "::group::kubectl cluster-info"
+          kubectl cluster-info
+          echo "::endgroup::"
+        run: |
+          echo "::group::kube config tartalma"
+          cat ~/.kube/config
+          echo "::endgroup::"
+>>>>>>> 4eeedfa74c008f284d009cf0efe3fa339dacbd9e
     
     - name: run kubectl apply
       run: |

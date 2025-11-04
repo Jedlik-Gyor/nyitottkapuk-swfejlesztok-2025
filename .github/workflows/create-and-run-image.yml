@@ -64,3 +64,9 @@ jobs:
       with:
         commit_message: GitHub action - update image tag in K8S deployment file
         push_options: --force
+
+    - name: run kubectl apply
+      run: |
+        kubectl apply -f k8s/nyitottkapuk-swdev-2026-deployment.yaml
+        echo ${{ secrets.KUBECONFIG }} > ~/.kube/config
+        kubectl apply -f k8s/nyitottkapuk-swdev-2026-deployment.yaml
