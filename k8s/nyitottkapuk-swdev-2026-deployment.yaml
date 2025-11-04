@@ -13,12 +13,9 @@ spec:
         component: nyitottkapuk-swdev-2026
     spec:
       containers:
-        - name: backend
+        - name: client
           image: ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:0.0.1
           imagePullPolicy: Always
-          env:      
-          - name: virtualdirectory
-            value: ""          
           ports:
             - containerPort: 3000            
       imagePullSecrets:
