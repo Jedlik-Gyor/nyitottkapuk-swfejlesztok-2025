@@ -13,7 +13,6 @@ jobs:
 
     - name: set up kubectl
       run: |
-        kubectl apply -f k8s/nyitottkapuk-swdev-2026-deployment.yaml
         echo ${{ secrets.KUBECONFIG }} > ~/.kube/config
         echo "::group::kubectl cluster-info"
           kubectl cluster-info
