@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import angular from "@/public/images/angular.png";
 import csharp from "@/public/images/csharp.png";
+import laravel from "@/public/images/laravel.png";
 import mongodb from "@/public/images/mongodb.png";
+import mysql from "@/public/images/mysql.png";
 import nextjs from "@/public/images/nextjs.png";
 import python from "@/public/images/python.png";
 import reactjs from "@/public/images/reactjs.png";
 import typescript from "@/public/images/typescript.png";
-import mysql from "@/public/images/mysql.png";
-import laravel from "@/public/images/laravel.png";
 
 const images = [
   { src: nextjs, alt: "Next.js" },
@@ -52,7 +52,7 @@ const images = [
 
 export default function LogoAnimation() {
   return (
-    <div className="glass my-24 skew-y-3 bg-purple-300/10 py-8 opacity-80">
+    <div className="glass my-24 skew-y-3 bg-gray-600 py-8 opacity-80 dark:bg-purple-300/10">
       <div className="container mx-auto">
         <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_25%,black_75%,transparent)]">
           <motion.div
@@ -67,18 +67,9 @@ export default function LogoAnimation() {
               repeatType: "loop",
             }}
           >
-            {images.map((image, index) =>
-              image.src ? (
-                <Image alt={image.alt} height={30} key={index} src={image.src} />
-              ) : (
-                <div
-                  className="flex h-8 w-24 items-center justify-center bg-gray-300 text-gray-600"
-                  key={index}
-                >
-                  LOGO
-                </div>
-              ),
-            )}
+            {images.map((image, index) => (
+              <Image alt={image.alt} height={30} key={index} src={image.src} />
+            ))}
           </motion.div>
         </div>
       </div>
