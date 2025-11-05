@@ -10,6 +10,7 @@ import python from "@/public/images/python.png";
 import reactjs from "@/public/images/reactjs.png";
 import typescript from "@/public/images/typescript.png";
 import mysql from "@/public/images/mysql.png";
+import laravel from "@/public/images/laravel.png";
 
 const images = [
   { src: nextjs, alt: "Next.js" },
@@ -19,6 +20,7 @@ const images = [
   { src: python, alt: "Python" },
   { src: mysql, alt: "MySQL" },
   { src: mongodb, alt: "MongoDB" },
+  { src: laravel, alt: "Laravel" },
   { src: nextjs, alt: "Next.js" },
   { src: reactjs, alt: "React.js" },
   { src: angular, alt: "Angular" },
@@ -27,6 +29,7 @@ const images = [
   { src: python, alt: "Python" },
   { src: mysql, alt: "MySQL" },
   { src: mongodb, alt: "MongoDB" },
+  { src: laravel, alt: "Laravel" },
   { src: nextjs, alt: "Next.js" },
   { src: reactjs, alt: "React.js" },
   { src: angular, alt: "Angular" },
@@ -35,6 +38,7 @@ const images = [
   { src: python, alt: "Python" },
   { src: mysql, alt: "MySQL" },
   { src: mongodb, alt: "MongoDB" },
+  { src: laravel, alt: "Laravel" },
   { src: nextjs, alt: "Next.js" },
   { src: reactjs, alt: "React.js" },
   { src: angular, alt: "Angular" },
@@ -43,6 +47,7 @@ const images = [
   { src: python, alt: "Python" },
   { src: mysql, alt: "MySQL" },
   { src: mongodb, alt: "MongoDB" },
+  { src: laravel, alt: "Laravel" },
 ];
 
 export default function LogoAnimation() {
