@@ -57,9 +57,9 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-52 text-white" id="portfolio">
+    <div className="container mx-auto px-4 py-52 text-gray-800/60 dark:text-white" id="portfolio">
       <h2 className="mb-16 text-center text-6xl font-bold">
-        Selected <span className="text-purple-300/60">Projects</span>
+        Selected <span className="text-blue-500/60 dark:text-purple-300/60">Projects</span>
       </h2>
 
       <div>
@@ -79,7 +79,7 @@ const Portfolio = () => {
             >
               <h3 className="text-4xl font-semibold">{project.title}</h3>
               <div className="flex items-center space-x-4">
-                <span className="text-3xl font-light text-purple-300/60">0{index + 1}</span>
+                <span className="text-3xl font-light dark:text-purple-300/60">0{index + 1}</span>
               </div>
             </motion.div>
 
@@ -130,14 +130,14 @@ const Portfolio = () => {
                     initial={{ opacity: 0, y: 10 }}
                   >
                     <div className="max-w-xl flex-1 space-y-4 p-6">
-                      <p className="text-white/70">{project.desc}</p>
-                      <p className="font-medium text-purple-300">{project.devstack}</p>
-                      <p className="font-medium text-purple-300/70 capitalize">{project.type}</p>
+                      <p className="text-gray-800/60 dark:text-white/70">{project.desc}</p>
+                      <p className="font-medium text-blue-500 dark:text-purple-300">{project.devstack}</p>
+                      <p className="font-medium dark:text-purple-300/70 capitalize">{project.type}</p>
                       <div className="flex justify-start space-x-4">
-                        <Link className="text-purple-400 hover:opacity-60" href={project.link}>
+                        <Link className="dark:text-purple-400 hover:opacity-60" href={project.link}>
                           <FaLink />
                         </Link>
-                        <Link className="text-purple-400 hover:opacity-60" href={project.git}>
+                        <Link className="dark:text-purple-400 hover:opacity-60" href={project.git}>
                           <FaGithub />
                         </Link>
                       </div>

@@ -44,8 +44,8 @@ const services = [
 const Services = () => {
   return (
     <div className="container mx-auto overflow-x-clip py-20" id="services">
-      <h2 className="mb-20 text-center text-6xl font-bold text-white">
-        My <span className="text-purple-300/60">Services</span>
+      <h2 className="mb-20 text-center text-6xl font-bold text-gray-800/60 dark:text-white">
+        My <span className="text-blue-500 dark:text-purple-300/60">Services</span>
       </h2>
 
       <div className="space-y-6 px-4">
@@ -67,10 +67,10 @@ const Services = () => {
             }}
           >
             <div className="mb-4 flex items-center gap-6">
-              <p className="text-4xl font-bold text-purple-300 opacity-50">{service.id}</p>
-              <p className="text-2xl font-bold text-white/80">{service.title}</p>
+              <p className="text-4xl font-bold text-blue-500 dark:text-purple-300 opacity-50">{service.id}</p>
+              <p className="text-2xl font-bold dark:text-white/80">{service.title}</p>
             </div>
-            <p className="pl-20 leading-relaxed text-gray-400">{service.description}</p>
+            <p className="pl-20 leading-relaxed text-gray-800 dark:text-gray-400">{service.description}</p>
           </motion.div>
         ))}
       </div>
