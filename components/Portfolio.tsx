@@ -5,9 +5,9 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
-import proj1 from "@/public/images/proj5.png";
-import proj2 from "@/public/images/proj8.png";
-import proj3 from "@/public/images/proj11.png";
+import proj1 from "@/public/images/proj1.png";
+import proj2 from "@/public/images/proj2.png";
+import proj3 from "@/public/images/proj3.png";
 
 type Project = {
   title: string;
@@ -21,31 +21,31 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Ecommerce Digital Products",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    devstack: "MongoDB, Express, React, Node.js",
+    title: "Éttermi rendeléskezelő alkalmazás",
+    desc: "A Inner Peace Restaurant egy vendégek és az étterem dolgozói közötti rendszer. A vendégek az alkalmazáson keresztül leadhatják rendeléseiket, amelyeket az étterem dolgozói valós időben láthatnak és kezelhetnek. Az alkalmazás célja a rendelési folyamat egyszerűsítése és a vendégélmény javítása.",
+    devstack: "MySql, Nuxt.js, Laravel, MAUI, Docker, Figma",
     link: "#",
     git: "#",
     src: proj1,
     type: "fullstack",
   },
   {
-    title: "Interactive E-Learning Platform",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    devstack: "NextJs",
+    title: "Digitális konyhai asszisztens",
+    desc: "A Digitális konyhai asszisztens egy olyan alkalmazás, amely segíti a felhasználókat a főzés során. Az alkalmazás receptajánlásokat, bevásárlólistákat és főzési időzítőket kínál, hogy a felhasználók könnyedén elkészíthessék kedvenc ételeiket.",
+    devstack: "Mysql, Vue.js, ASP.NET Core",
     link: "#",
     git: "#",
     src: proj2,
-    type: "frontend",
+    type: "fullstack",
   },
   {
-    title: "Portfolio Website",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    devstack: "React, Tailwind",
+    title: "Slim Fit Gym Weboldal",
+    desc: "A Slim Fit Gym weboldal egy modern és felhasználóbarát platform, amely bemutatja az edzőterem szolgáltatásait, edzéstervét és árait. Az oldal célja, hogy vonzó legyen a potenciális ügyfelek számára, és megkönnyítse a kapcsolatfelvételt az edzőteremmel.",
+    devstack: "ASP.NET, Angular, TypeScript, SCSS, Cypress",
     link: "#",
     git: "#",
     src: proj3,
-    type: "frontend",
+    type: "fullstack",
   },
 ];
 
@@ -57,9 +57,9 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-52 text-gray-800/60 dark:text-white" id="portfolio">
+    <div className="container mx-auto px-4 py-20 text-gray-800/60 dark:text-white" id="portfolio">
       <h2 className="mb-16 text-center text-6xl font-bold">
-        Selected <span className="text-blue-500/60 dark:text-purple-300/60">Projects</span>
+        Tavalyi <span className="text-blue-500/60 dark:text-purple-300/60">záródolgozatok</span>
       </h2>
 
       <div>
@@ -131,13 +131,17 @@ const Portfolio = () => {
                   >
                     <div className="max-w-xl flex-1 space-y-4 p-6">
                       <p className="text-gray-800/60 dark:text-white/70">{project.desc}</p>
-                      <p className="font-medium text-blue-500 dark:text-purple-300">{project.devstack}</p>
-                      <p className="font-medium dark:text-purple-300/70 capitalize">{project.type}</p>
+                      <p className="font-medium text-blue-500 dark:text-purple-300">
+                        {project.devstack}
+                      </p>
+                      <p className="font-medium capitalize dark:text-purple-300/70">
+                        {project.type}
+                      </p>
                       <div className="flex justify-start space-x-4">
-                        <Link className="dark:text-purple-400 hover:opacity-60" href={project.link}>
+                        <Link className="hover:opacity-60 dark:text-purple-400" href={project.link}>
                           <FaLink />
                         </Link>
-                        <Link className="dark:text-purple-400 hover:opacity-60" href={project.git}>
+                        <Link className="hover:opacity-60 dark:text-purple-400" href={project.git}>
                           <FaGithub />
                         </Link>
                       </div>

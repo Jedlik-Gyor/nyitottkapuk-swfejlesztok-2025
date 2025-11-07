@@ -12,10 +12,11 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
   { title: "Top", path: "#hero" },
-  { title: "About", path: "#about" },
-  { title: "Portfolio", path: "#portfolio" },
-  { title: "Services", path: "#services" },
-  { title: "Contact", path: "#contact" },
+  { title: "Statisztika", path: "#about" },
+  { title: "Képzés", path: "#services" },
+  { title: "Portfóliók", path: "#portfolio" },
+  { title: "Versenyek", path: "#competitions" },
+  { title: "Kapcsolat", path: "#contact" },
 ];
 
 export default function Navbar() {
@@ -31,7 +32,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed z-50 flex w-full justify-center font-bold dark:text-white">
-      <div className="mx-auto mt-2 hidden max-w-[500px] items-center justify-center rounded-3xl border border-gray-800/20 p-2 backdrop-blur-3xl md:flex dark:border-white/20">
+      <div className="mx-auto mt-2 hidden max-w-[700px] items-center justify-center rounded-3xl border border-gray-800/20 p-2 backdrop-blur-3xl md:flex dark:border-white/20">
         <ul className="flex flex-row space-x-8 p-2">
           {navLinks.map((link, index) => (
             <li key={index}>
@@ -48,14 +49,14 @@ export default function Navbar() {
       </div>
 
       <div
-        className="absolute top-5 right-14 z-50 rounded border dark:border-white/70 p-2 dark:text-white/70 md:hidden"
+        className="absolute top-5 right-14 z-50 rounded border p-2 md:hidden dark:border-white/70 dark:text-white/70"
         onClick={toggleNav}
       >
         {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
       </div>
 
       <div
-        className={`fixed top-0 left-0 z-40 h-full w-full transform bg-white dark:bg-black/90 transition-transform duration-300 ${
+        className={`fixed top-0 left-0 z-40 h-full w-full transform bg-white transition-transform duration-300 dark:bg-black/90 ${
           nav ? "translate-x-0" : "-translate-x-full"
         }`}
       >

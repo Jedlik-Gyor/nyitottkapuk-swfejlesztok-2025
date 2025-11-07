@@ -1,71 +1,79 @@
-import { AiFillFacebook, AiFillGithub, AiFillInstagram, AiOutlineX } from "react-icons/ai";
+import {
+  AiFillFacebook,
+  AiFillGithub,
+  AiFillHome,
+  AiFillInstagram,
+  AiFillTikTok,
+  AiOutlineX,
+  AiOutlineYoutube,
+} from "react-icons/ai";
 
 export default function Footer() {
   return (
     <footer className="relative mx-auto max-w-[1200px] px-4 py-8">
-      <div className="absolute inset-0 overflow-hidden md:hidden">
-        <div className="absolute top-[20%] left-[20%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] transform rounded-full bg-purple-300 opacity-30"></div>
-        <div className="absolute top-[20%] left-[50%] h-[70px] w-[150px] translate-x-[-50%] translate-y-[-50%] transform rounded-full bg-purple-900 opacity-50"></div>
-        <div className="absolute top-[25%] left-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] transform rounded-full bg-purple-600 opacity-30"></div>
-      </div>
-
-      <div className="absolute inset-0 hidden overflow-hidden md:block">
-        <div className="absolute top-[40%] left-[20%] h-[200px] w-[200px] translate-x-[-50%] translate-y-[-50%] transform rounded-full bg-purple-300 opacity-40"></div>
-        <div className="absolute top-[45%] left-[60%] h-[150px] w-[250px] translate-x-[-50%] translate-y-[-50%] transform rounded-full bg-purple-200 opacity-20"></div>
-        <div className="absolute top-[60%] left-[49%] h-[100px] w-[200px] translate-x-[-50%] translate-y-[-50%] transform rounded-full bg-purple-600 opacity-30"></div>
-      </div>
-
       <div className="relative z-10 mt-8 text-center">
-        <h1 className="hidden font-bold text-white/10 md:block md:text-[6rem] lg:text-[8rem]">
-          JEDLIK ÁNYOS
+        <p className="hidden font-bold text-white/10 md:block md:text-[6rem] lg:text-[3rem]">
+          Győri SZC Jedlik Ányos Gépipari és Informatikai Technikum és Kollégium
+        </p>
+        <h1 className="relative mb-12 text-6xl font-bold text-white/10 md:hidden">
+          Győri SZC Jedlik Ányos Gépipari és Informatikai Technikum és Kollégium
         </h1>
-        <h1 className="relative mb-12 text-6xl font-bold text-white/10 md:hidden">JEDLIK ÁNYOS</h1>
       </div>
 
-      <div className="grid grid-cols-2 gap-8 text-gray-200 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-8 text-gray-200 sm:grid-cols-2">
         <div className="space-y-2">
-          <h3 className="font-bold">Contact Me</h3>
-          <p>+89898998</p>
-          <p>john@doe.com</p>
-        </div>
-
-        <div className="space-y-2">
-          <h3 className="font-bold">Useful links</h3>
+          <h3 className="font-bold">Hasznos linkek</h3>
           <ul>
             <li>
-              <a className="hover:underline" href="#">
-                Home
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="#">
-                404 Page
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="#">
-                Licensing
+              <a
+                className="hover:underline"
+                href="https://jedlik.eu"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <AiFillHome size={60} />
               </a>
             </li>
           </ul>
         </div>
 
         <div className="space-y-2">
-          <h3 className="font-bold">Social</h3>
-          <ul>
+          <h3 className="font-bold">Közösségi média</h3>
+          <ul className="flex flex-row gap-6">
             <li>
-              <a className="hover:underline" href="#">
-                Github
+              <a
+                href="https://www.facebook.com/jedlikanyostechnikum"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <AiFillFacebook size={60} />
               </a>
             </li>
             <li>
-              <a className="hover:underline" href="#">
-                X
+              <a
+                href="https://www.instagram.com/jedlikanyostechnikum/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <AiFillInstagram size={60} />
               </a>
             </li>
             <li>
-              <a className="hover:underline" href="#">
-                LinkedIn
+              <a
+                href="https://www.tiktok.com/@jedliktechnikum"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <AiFillTikTok size={60} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@jedlikanyostechnikum_9189/shorts"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <AiOutlineYoutube size={60} />
               </a>
             </li>
           </ul>
@@ -73,30 +81,7 @@ export default function Footer() {
       </div>
 
       <div className="container mt-12 flex items-center justify-center gap-10 text-gray-400 sm:justify-between">
-        <p>© {new Date().getFullYear()}. All rights reserved.</p>
-
-        <ul className="flex flex-row gap-6">
-          <li>
-            <a href="#">
-              <AiFillGithub size={30} />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <AiOutlineX size={30} />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <AiFillFacebook size={30} />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <AiFillInstagram size={30} />
-            </a>
-          </li>
-        </ul>
+        <p>© {new Date().getFullYear()}. Minden jog fenntartva.</p>
       </div>
     </footer>
   );

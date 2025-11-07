@@ -52,7 +52,7 @@ const images = [
 
 export default function LogoAnimation() {
   return (
-    <div className="glass my-24 skew-y-3 bg-gray-600 py-8 opacity-80 dark:bg-purple-300/10">
+    <div className="glass skew-y-3 bg-gray-600 py-8 opacity-80 dark:bg-purple-300/10">
       <div className="container mx-auto">
         <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_25%,black_75%,transparent)]">
           <motion.div

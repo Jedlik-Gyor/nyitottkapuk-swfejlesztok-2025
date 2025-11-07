@@ -1,3 +1,4 @@
+import Competition from "@/components/Competition";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -10,14 +11,15 @@ import TextReveal from "@/components/TextReveal";
 
 export default function Home() {
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 transition-colors">
+    <div className="bg-gray-100 transition-colors dark:bg-gray-900">
       <Navbar />
       <Hero />
       <TextReveal />
       <KeyMetrics />
       <LogoAnimation />
-      <Portfolio />
       <Services />
+      <Portfolio />
+      <Competition />
       <Contact />
       <Footer />
     </div>

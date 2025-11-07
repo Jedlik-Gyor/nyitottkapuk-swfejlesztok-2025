@@ -18,7 +18,7 @@ const sizes: Size[] = [
     width: 300,
     height: 500,
     text: "Szoftverfejlesztő",
-    text2: `és tesztelő - ${new Date().getFullYear()}`,
+    text2: `és -tesztelő - ${new Date().getFullYear()}`,
   },
   { width: 500, height: 500, text: "", text2: "" },
 ];
@@ -32,7 +32,13 @@ const Hero = () => {
           JEDLIK ÁNYOS <br />
           TECHNIKUM <br />
         </h1>
-        <Image alt="profile picture" className="opacity-30" height={300} src={jedlikBig} width={0} />
+        <Image
+          alt="profile picture"
+          className="opacity-30"
+          height={300}
+          src={jedlikBig}
+          width={0}
+        />
       </div>
 
       <div className="absolute inset-0 z-10 flex w-full items-center justify-center">

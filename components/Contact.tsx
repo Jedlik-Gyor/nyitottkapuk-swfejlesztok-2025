@@ -19,7 +19,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             whileInView={{ opacity: 1, x: 0 }}
           >
-            Get in <span className="text-purple-500">touch</span>
+            Maradjunk <span className="text-purple-300/60">kapcsolatban</span>
           </motion.h2>
 
           <motion.div
@@ -29,35 +29,31 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
           >
             <div className="space-y-2">
-              <p className="text-lg text-purple-300">Phone</p>
+              <p className="text-lg text-purple-300/60">Telefon</p>
               <a
                 className="flex items-center gap-2 text-2xl font-semibold transition duration-300 hover:text-gray-400"
                 href="tel:+3696529480"
               >
                 +36 (96) 529-480
-                <span className="text-purple-500">↗</span>
+                <span className="text-purple-300/60">↗</span>
               </a>
             </div>
 
             <div className="space-y-2">
-              <p className="text-lg text-purple-300">Email</p>
+              <p className="text-lg text-purple-300/60">E-mail</p>
               <a
                 className="flex items-center gap-2 text-3xl font-semibold transition duration-300 hover:text-gray-400 lg:text-4xl"
-                href="mailto:szabo.janos@jedlik.eu"
+                href="mailto:jedlik@jedlik.eu"
               >
-                szabo.janos@jedlik.eu
-                <span className="text-purple-500">↗</span>
+                jedlik@jedlik.eu
+                <span className="text-purple-300/60">↗</span>
               </a>
             </div>
 
             <div className="space-y-2">
-              <p className="text-lg text-purple-300">Office</p>
+              <p className="text-lg text-purple-300/60">Cím</p>
               <address className="text-xl leading-relaxed not-italic">
-                Szent István street 007.
-                <br />
-                Győr
-                <br />
-                Hungary
+                9021 Győr, Szent István út 7.
               </address>
             </div>
           </motion.div>

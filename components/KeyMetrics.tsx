@@ -15,31 +15,38 @@ const metrics: Metric[] = [
     id: 1,
     value: "5+",
     label: "Fejlesztési terület",
-    description: "Tapasztalatot szereztem asztali, mobil, front-end, back-end és tesztautomatizálás területeken.",
+    description:
+      "<ul><li>- asztali</li><li>- mobil</li><li>- front-end</li>" +
+      "<li>- back-end</li><li>- tesztelés</li></ul>",
   },
   {
     id: 2,
     value: "100%",
     label: "Minőségbiztosítás",
-    description: "A kódot rendszeres teszteléssel és verziókövetéssel tartom naprakészen.",
+    description:
+      "<ul><li>- csoportmunka</li><li>- verziókövetés</li><li>- tiszta kód</li><li>- kódellenőrzés</li><li>- automatizált tesztek</li><li>- tervezési minták</li></ul>",
   },
   {
     id: 3,
     value: "10+",
     label: "Használt technológia",
-    description: "Ismerem a modern fejlesztői technológiákat és eszközöket.",
+    description:
+      "Modern fejlesztői technológiák és eszközök." +
+      "<ul><li>- Docker, Kubernetes</li><li>- Git, GitHub</li><li>- REST API</li><li>- VS Code, Visual Studio</li><li>- Copilot, ChatGPT, Gemini</li><li>- Cypress, Selenium</li><li>- SQL, NoSQL</li></ul>",
   },
   {
     id: 4,
     value: "5+",
-    label: "Programozás",
-    description: "Elsajátítottam a Python, C#, JavaScript, TypeScript, PHP, SQL, NoSQL nyelveket.",
+    label: "Programozási nyelvek",
+    description:
+      "<ul><li>- Python</li><li>- C#</li><li>- JavaScript</li><li>- TypeScript</li><li>- PHP</li></ul>",
   },
   {
     id: 5,
     value: "CI/CD",
     label: "Fejlesztési folyamat",
-    description: "Automatizált build, tesztelés és telepítés a hatékony fejlesztésért.",
+    description:
+      "<ul><li>- folyamatos integráció</li><li>- automatizált build</li><li>- tesztelés</li><li>- telepítés</li></ul>",
   },
 ];
 
@@ -68,7 +75,9 @@ export default function KeyMetrics() {
       }}
     >
       <motion.h2 variants={fadeInUp}>
-        <p className="text-center text-6xl font-bold text-gray-800/30 dark:text-purple-300/10 md:text-8xl">RÓLAM</p>
+        <p className="text-center text-6xl font-bold text-gray-800/30 md:text-8xl dark:text-purple-300/80">
+          Mihez ért egy Jedlikes?
+        </p>
       </motion.h2>
 
       <div className="mt-6 flex flex-col items-stretch space-y-12 overflow-x-auto rounded-2xl bg-white/5 p-8 backdrop-blur-sm md:flex-row md:space-y-0">
@@ -80,9 +89,14 @@ export default function KeyMetrics() {
             variants={fadeInUp}
             whileHover={{ scale: 1.05 }}
           >
-            <h3 className="mb-4 text-5xl font-bold text-blue-500/60 dark:text-purple-300/40">{metric.value}</h3>
-            <p className="mb-2 text-lg text-black dark:text-white">{metric.label}</p>
-            <p className="text-sm text-gray-800 dark:text-gray-400">{metric.description}</p>
+            <h3 className="mb-4 text-5xl font-bold text-blue-500/60 dark:text-purple-300/60">
+              {metric.value}
+            </h3>
+            <p className="mb-2 text-2xl text-black dark:text-white">{metric.label}</p>
+            <p
+              className="text-sm text-gray-800 dark:text-gray-400"
+              dangerouslySetInnerHTML={{ __html: metric.description }}
+            />
           </motion.div>
         ))}
       </div>
