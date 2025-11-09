@@ -1,6 +1,7 @@
 # Nyitott kapuk 2025
 
 ## Hosting
+[Jedlik](https://nyk2025.jedlik.cloud/)
 [Vercel](https://jedlik2026.vercel.app/)
 
 ## Install

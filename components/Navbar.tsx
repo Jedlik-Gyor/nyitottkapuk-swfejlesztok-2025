@@ -11,7 +11,8 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { title: "Top", path: "#hero" },
+  { title: "Start", path: "#hero" },
+  { title: "Bemutatkozás", path: "#introduction" },
   { title: "Statisztika", path: "#about" },
   { title: "Képzés", path: "#services" },
   { title: "Portfóliók", path: "#portfolio" },
@@ -32,7 +33,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed z-50 flex w-full justify-center font-bold dark:text-white">
-      <div className="mx-auto mt-2 hidden max-w-[700px] items-center justify-center rounded-3xl border border-gray-800/20 p-2 backdrop-blur-3xl md:flex dark:border-white/20">
+      <div className="mx-auto mt-2 hidden max-w-[800px] items-center justify-center rounded-3xl border border-gray-800/20 p-2 backdrop-blur-3xl md:flex dark:border-white/20">
         <ul className="flex flex-row space-x-8 p-2">
           {navLinks.map((link, index) => (
             <li key={index}>

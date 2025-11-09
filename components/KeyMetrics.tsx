@@ -33,14 +33,14 @@ const metrics: Metric[] = [
   {
     id: 3,
     value: "10+",
-    label: "Használt technológia",
+    label: "Technológiák",
     description: [
-      "Modern fejlesztői technológiák és eszközök.",
+      
       "Docker, Kubernetes",
       "Git, GitHub",
       "REST API",
       "VS Code, Visual Studio",
-      "Copilot, ChatGPT, Gemini",
+      "Copilot, ChatGPT",
       "Cypress, Selenium",
       "SQL, NoSQL",
     ],
@@ -84,8 +84,8 @@ export default function KeyMetrics() {
       }}
     >
       <motion.h2 variants={fadeInUp}>
-        <p className="text-center text-6xl font-bold text-gray-800/30 md:text-8xl dark:text-purple-300/80">
-          Mihez ért egy Jedlikes?
+        <p className="text-center text-6xl font-bold text-gray-800/30 md:text-6xl dark:text-purple-300/80">
+          Mihez ért egy végzett Jedlikes?
         </p>
       </motion.h2>
 

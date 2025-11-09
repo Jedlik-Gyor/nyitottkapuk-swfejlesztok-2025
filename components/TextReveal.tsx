@@ -20,46 +20,46 @@ export default function TextReveal() {
     return () => unsubscribe();
   }, [scrollYProgress]);
 
-const words = [
-  "Szia!",
-  "Én",
-  "a",
-  "Jedlikben",
-  "végzett",
-  "szoftverfejlesztő",
-  "és",
-  "tesztelő",
-  "vagyok",
-  "aki",
-  "tiszta,",
-  "megbízható",
-  "kódot",
-  "ír,",
-  "automatizált",
-  "teszteket",
-  "készít,",
-  "és",
-  "stabil",
-  "alkalmazásokat",
-  "épít.",
-  "Célom,",
-  "hogy",
-  "a",
-  "fejlesztés,",
-  "a",
-  "tesztelés",
-  "és",
-  "a",
-  "mesterséges",
-  "intelligencia",
-  "együtt",
-  "hozzon",
-  "létre",
-  "magas",
-  "minőségű,",
-  "hatékony",
-  "megoldásokat.",
-];
+  const words = [
+    "Szia!",
+    "Én",
+    "a",
+    "Jedlikben",
+    "végzett",
+    "szoftverfejlesztő",
+    "és",
+    "tesztelő",
+    "vagyok",
+    "aki",
+    "tiszta,",
+    "megbízható",
+    "kódot",
+    "ír,",
+    "automatizált",
+    "teszteket",
+    "készít,",
+    "és",
+    "stabil",
+    "alkalmazásokat",
+    "épít.",
+    "Célom,",
+    "hogy",
+    "a",
+    "fejlesztés,",
+    "a",
+    "tesztelés",
+    "és",
+    "a",
+    "mesterséges",
+    "intelligencia",
+    "együtt",
+    "hozzon",
+    "létre",
+    "magas",
+    "minőségű,",
+    "hatékony",
+    "megoldásokat.",
+  ];
 
   // Segédfüggvény: lineáris interpoláció + clamp
   const interp = (v: number, inMin: number, inMax: number, outMin: number, outMax: number) => {
@@ -70,7 +70,8 @@ const words = [
 
   return (
     <div
-      className="mx-auto max-w-[900px] p-6 text-4xl leading-relaxed font-semibold md:p-0 md:text-6xl"
+      className="mx-auto max-w-[900px] p-6 text-4xl leading-relaxed font-semibold md:p-0 md:pt-20 md:text-6xl"
+      id="introduction"
       ref={containerRef}
     >
       <p>
