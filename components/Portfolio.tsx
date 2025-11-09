@@ -57,9 +57,15 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-20 text-gray-800/60 dark:text-white" id="portfolio">
+    <div
+      className="container mx-auto px-4 py-20 text-gray-900 dark:text-white"
+      id="portfolio"
+    >
       <h2 className="mb-16 text-center text-6xl font-bold">
-        Tavalyi <span className="text-blue-500/60 dark:text-purple-300/60">záródolgozatok</span>
+        Tavalyi{" "}
+        <span className="text-blue-500 dark:text-purple-300/60">
+          záródolgozatok
+        </span>
       </h2>
 
       <div>
@@ -73,19 +79,24 @@ const Portfolio = () => {
             whileInView={{ opacity: 1, y: 0 }}
           >
             <motion.div
-              className="flex cursor-pointer items-center justify-between rounded-lg border border-white/10 bg-black/20 p-6"
+              className="flex cursor-pointer items-center justify-between rounded-lg border border-gray-200 bg-gray-100 p-6 dark:border-white/10 dark:bg-black/20"
               layout="position"
               onClick={() => toggleExpand(index)}
             >
-              <h3 className="text-4xl font-semibold">{project.title}</h3>
+              <h3 className="text-4xl font-semibold text-gray-900 dark:text-white">
+                {project.title}
+              </h3>
               <div className="flex items-center space-x-4">
-                <span className="text-3xl font-light dark:text-purple-300/60">0{index + 1}</span>
+                <span className="text-3xl font-light text-blue-500/60 dark:text-purple-300/60">
+                  0{index + 1}
+                </span>
               </div>
             </motion.div>
 
             <AnimatePresence initial={false}>
               {expandedIndex === index && (
                 <motion.div
+                  className="bg-gray-100 p-6 dark:bg-black/20"
                   animate={{
                     opacity: 1,
                     height: "auto",
@@ -100,7 +111,6 @@ const Portfolio = () => {
                       },
                     },
                   }}
-                  className="bg-black/20 p-6"
                   exit={{
                     opacity: 0,
                     height: 0,
@@ -130,18 +140,26 @@ const Portfolio = () => {
                     initial={{ opacity: 0, y: 10 }}
                   >
                     <div className="max-w-xl flex-1 space-y-4 p-6">
-                      <p className="text-gray-800/60 dark:text-white/70">{project.desc}</p>
+                      <p className="text-gray-800 dark:text-white/70">
+                        {project.desc}
+                      </p>
                       <p className="font-medium text-blue-500 dark:text-purple-300">
                         {project.devstack}
                       </p>
-                      <p className="font-medium capitalize dark:text-purple-300/70">
+                      <p className="font-medium capitalize text-blue-500/70 dark:text-purple-300/70">
                         {project.type}
                       </p>
                       <div className="flex justify-start space-x-4">
-                        <Link className="hover:opacity-60 dark:text-purple-400" href={project.link}>
+                        <Link
+                          className="text-blue-600 hover:opacity-60 dark:text-purple-400"
+                          href={project.link}
+                        >
                           <FaLink />
                         </Link>
-                        <Link className="hover:opacity-60 dark:text-purple-400" href={project.git}>
+                        <Link
+                          className="text-blue-600 hover:opacity-60 dark:text-purple-400"
+                          href={project.git}
+                        >
                           <FaGithub />
                         </Link>
                       </div>

@@ -7,19 +7,19 @@ const services = [
     id: "01",
     title: "Full-Stack webfejlesztés",
     description:
-      "Robusztus, skálázható webalkalmazások építése a front-endtől a back-endig.<br />Tanítjuk többek között <b style='color: pink'>HTML</b>, <b style='color: pink'>CSS</b>, <b style='color: pink'>JavaScript</b>, valamint modern keretrendszerek (<b style='color: pink'>Laravel</b>, <b style='color: pink'>Node.js</b>, <b style='color: pink'>React</b>, <b style='color: pink'>Angular</b>) és könyvtárak használatát.",
+      "Robusztus, skálázható webalkalmazások építése a front-endtől a back-endig.<br />Tanítjuk többek között <b class='text-pink-500 dark:text-pink-400'>HTML</b>, <b class='text-pink-500 dark:text-pink-400'>CSS</b>, <b class='text-pink-500 dark:text-pink-400'>JavaScript</b>, valamint modern keretrendszerek (<b class='text-pink-500 dark:text-pink-400'>Laravel</b>, <b class='text-pink-500 dark:text-pink-400'>Node.js</b>, <b class='text-pink-500 dark:text-pink-400'>React</b>, <b class='text-pink-500 dark:text-pink-400'>Angular</b>) és könyvtárak használatát.",
   },
   {
     id: "02",
     title: "Asztali és -mobilalkalmazás fejlesztés",
     description:
-      "Asztali és mobilalkalmazások tervezése és fejlesztése.<br /> <b style='color: pink'>C#</b> nyelven konzolos, <b style='color: pink'>WPF</b> segítségével windowsos asztali alkalmazásokat, míg Visual Studió és <b style='color: pink'>.NET MAUI</b> segítségével mobil alkalmazások létrehozását tanulják meg a tanulók.",
+      "Asztali és mobilalkalmazások tervezése és fejlesztése.<br /> <b class='text-pink-500 dark:text-pink-400'>C#</b> nyelven konzolos, <b class='text-pink-500 dark:text-pink-400'>WPF</b> segítségével windowsos asztali alkalmazásokat, míg Visual Studió és <b class='text-pink-500 dark:text-pink-400'>.NET MAUI</b> segítségével mobil alkalmazások létrehozását tanulják meg a tanulók.",
   },
   {
     id: "03",
     title: "Adatbázis-tervezés és -kezelés",
     description:
-      "Hatékony adatbázis-struktúrák kialakítása és az adatáramlás kezelése az optimális teljesítmény és az adatintegritás biztosítása érdekében.<br /> Tanítunk <b style='color: pink'>SQL</b> és <b style='color: pink'>NoSQL</b> adatbázisokat is.",
+      "Hatékony adatbázis-struktúrák kialakítása és az adatáramlás kezelése az optimális teljesítmény és az adatintegritás biztosítása érdekében.<br /> Tanítunk <b class='text-pink-500 dark:text-pink-400'>SQL</b> és <b class='text-pink-500 dark:text-pink-400'>NoSQL</b> adatbázisokat is.",
   },
   {
     id: "04",
@@ -38,14 +38,14 @@ const services = [
 const Services = () => {
   return (
     <div className="container mx-auto overflow-x-clip py-20" id="services">
-      <h2 className="mb-20 text-center text-6xl font-bold text-gray-800/60 dark:text-white">
+      <h2 className="mb-20 text-center text-6xl font-bold text-gray-900 dark:text-white">
         Szakmai <span className="text-blue-500 dark:text-purple-300/60">képzés</span>
       </h2>
 
       <div className="space-y-6 px-4">
         {services.map((service, index) => (
           <motion.div
-            className="flex flex-col border-b border-purple-300/20 pb-8"
+            className="flex flex-col border-b border-gray-200 pb-8 dark:border-purple-300/20"
             initial={{
               x: index % 2 === 0 ? -100 : 100,
               opacity: 0,
@@ -64,7 +64,9 @@ const Services = () => {
               <p className="text-4xl font-bold text-blue-500 opacity-50 dark:text-purple-300">
                 {service.id}
               </p>
-              <p className="text-2xl font-bold dark:text-white/80">{service.title}</p>
+              <p className="text-2xl font-bold text-gray-900 dark:text-white/80">
+                {service.title}
+              </p>
             </div>
             <p className="pl-20 leading-relaxed text-gray-800 dark:text-gray-400">
               <span dangerouslySetInnerHTML={{ __html: service.description }} />
