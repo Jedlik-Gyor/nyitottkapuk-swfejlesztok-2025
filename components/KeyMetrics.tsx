@@ -7,7 +7,7 @@ type Metric = {
   id: number;
   value: string;
   label: string;
-  description: string;
+  description: string[];
 };
 
 const metrics: Metric[] = [
@@ -15,38 +15,47 @@ const metrics: Metric[] = [
     id: 1,
     value: "5+",
     label: "Fejlesztési terület",
-    description:
-      "<ul><li>- asztali</li><li>- mobil</li><li>- front-end</li>" +
-      "<li>- back-end</li><li>- tesztelés</li></ul>",
+    description: ["asztali", "mobil", "front-end", "back-end", "tesztelés"],
   },
   {
     id: 2,
     value: "100%",
     label: "Minőségbiztosítás",
-    description:
-      "<ul><li>- csoportmunka</li><li>- verziókövetés</li><li>- tiszta kód</li><li>- kódellenőrzés</li><li>- automatizált tesztek</li><li>- tervezési minták</li></ul>",
+    description: [
+      "csoportmunka",
+      "verziókövetés",
+      "tiszta kód",
+      "kódellenőrzés",
+      "automatizált tesztek",
+      "tervezési minták",
+    ],
   },
   {
     id: 3,
     value: "10+",
     label: "Használt technológia",
-    description:
-      "Modern fejlesztői technológiák és eszközök." +
-      "<ul><li>- Docker, Kubernetes</li><li>- Git, GitHub</li><li>- REST API</li><li>- VS Code, Visual Studio</li><li>- Copilot, ChatGPT, Gemini</li><li>- Cypress, Selenium</li><li>- SQL, NoSQL</li></ul>",
+    description: [
+      "Modern fejlesztői technológiák és eszközök.",
+      "Docker, Kubernetes",
+      "Git, GitHub",
+      "REST API",
+      "VS Code, Visual Studio",
+      "Copilot, ChatGPT, Gemini",
+      "Cypress, Selenium",
+      "SQL, NoSQL",
+    ],
   },
   {
     id: 4,
     value: "5+",
     label: "Programozási nyelvek",
-    description:
-      "<ul><li>- Python</li><li>- C#</li><li>- JavaScript</li><li>- TypeScript</li><li>- PHP</li></ul>",
+    description: ["Python", "C#", "JavaScript", "TypeScript", "PHP"],
   },
   {
     id: 5,
     value: "CI/CD",
     label: "Fejlesztési folyamat",
-    description:
-      "<ul><li>- folyamatos integráció</li><li>- automatizált build</li><li>- tesztelés</li><li>- telepítés</li></ul>",
+    description: ["folyamatos integráció", "automatizált build", "tesztelés", "telepítés"],
   },
 ];
 
@@ -93,10 +102,11 @@ export default function KeyMetrics() {
               {metric.value}
             </h3>
             <p className="mb-2 text-2xl text-black dark:text-white">{metric.label}</p>
-            <p
-              className="text-sm text-gray-800 dark:text-gray-400"
-              dangerouslySetInnerHTML={{ __html: metric.description }}
-            />
+            <ul className="list-inside list-disc text-left text-sm text-gray-800 dark:text-gray-400">
+              {metric.description.map((desc, descIndex) => (
+                <li key={descIndex}>{desc}</li>
+              ))}
+            </ul>
           </motion.div>
         ))}
       </div>

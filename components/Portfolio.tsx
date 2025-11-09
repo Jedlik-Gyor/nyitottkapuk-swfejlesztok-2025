@@ -57,15 +57,9 @@ const Portfolio = () => {
   };
 
   return (
-    <div
-      className="container mx-auto px-4 py-20 text-gray-900 dark:text-white"
-      id="portfolio"
-    >
+    <div className="container mx-auto px-4 py-20 text-gray-900 dark:text-white" id="portfolio">
       <h2 className="mb-16 text-center text-6xl font-bold">
-        Tavalyi{" "}
-        <span className="text-blue-500 dark:text-purple-300/60">
-          záródolgozatok
-        </span>
+        Tavalyi <span className="text-blue-500 dark:text-purple-300/60">záródolgozatok</span>
       </h2>
 
       <div>
@@ -96,7 +90,6 @@ const Portfolio = () => {
             <AnimatePresence initial={false}>
               {expandedIndex === index && (
                 <motion.div
-                  className="bg-gray-100 p-6 dark:bg-black/20"
                   animate={{
                     opacity: 1,
                     height: "auto",
@@ -111,6 +104,7 @@ const Portfolio = () => {
                       },
                     },
                   }}
+                  className="bg-gray-100 p-6 dark:bg-black/20"
                   exit={{
                     opacity: 0,
                     height: 0,
@@ -140,13 +134,11 @@ const Portfolio = () => {
                     initial={{ opacity: 0, y: 10 }}
                   >
                     <div className="max-w-xl flex-1 space-y-4 p-6">
-                      <p className="text-gray-800 dark:text-white/70">
-                        {project.desc}
-                      </p>
+                      <p className="text-gray-800 dark:text-white/70">{project.desc}</p>
                       <p className="font-medium text-blue-500 dark:text-purple-300">
                         {project.devstack}
                       </p>
-                      <p className="font-medium capitalize text-blue-500/70 dark:text-purple-300/70">
+                      <p className="font-medium text-blue-500/70 capitalize dark:text-purple-300/70">
                         {project.type}
                       </p>
                       <div className="flex justify-start space-x-4">
