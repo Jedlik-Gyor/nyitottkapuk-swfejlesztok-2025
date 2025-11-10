@@ -27,15 +27,15 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen overflow-x-clip" id="hero">
       <div className="absolute inset-0 z-0 flex flex-col items-center justify-around overflow-hidden md:flex-row">
-        <h1 className="text-center text-[4rem] font-bold whitespace-nowrap text-gray-800/30 transition-colors md:text-[8rem] dark:text-purple-400/10">
+        <h1 className="text-center text-[2rem] font-bold whitespace-nowrap text-gray-800/30 transition-colors lg:text-[4rem] dark:text-purple-400/10">
           GYŐRI SZC <br />
           JEDLIK ÁNYOS <br />
           TECHNIKUM <br />
         </h1>
         <Image
           alt="profile picture"
-          className="opacity-30"
-          height={300}
+          className="h-30 w-auto lg:h-[400px] opacity-30"
+          height={0}
           src={jedlikBig}
           width={0}
         />
