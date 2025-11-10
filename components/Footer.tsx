@@ -13,7 +13,7 @@ export default function Footer() {
         <p className="hidden font-bold text-black/50 md:block md:text-[6rem] lg:text-[3rem] dark:text-white/60">
           Győri SZC Jedlik Ányos Gépipari és Informatikai Technikum és Kollégium
         </p>
-        <h1 className="relative mb-12 text-5xl font-bold text-black/50 md:hidden dark:text-white/60">
+        <h1 className="relative mb-12 text-3xl md:text-5xl font-bold text-black/50 md:hidden dark:text-white/60">
           Győri SZC Jedlik Ányos Gépipari és Informatikai Technikum és Kollégium
         </h1>
       </div>

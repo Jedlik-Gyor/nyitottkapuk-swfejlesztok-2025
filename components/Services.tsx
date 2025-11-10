@@ -38,7 +38,7 @@ const services = [
 const Services = () => {
   return (
     <div className="container mx-auto overflow-x-clip py-20" id="services">
-      <h2 className="mb-20 text-center text-6xl font-bold text-gray-900 dark:text-white">
+      <h2 className="mb-20 text-center text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
         Szakmai <span className="text-blue-500 dark:text-purple-300/60">képzés</span>
       </h2>
 

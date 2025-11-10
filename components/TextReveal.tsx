@@ -70,7 +70,7 @@ export default function TextReveal() {
 
   return (
     <div
-      className="mx-auto max-w-[900px] p-6 text-4xl leading-relaxed font-semibold md:p-0 md:pt-20 md:text-6xl"
+      className="mx-auto max-w-[900px] p-6 text-3xl leading-relaxed font-semibold md:p-0 md:pt-20 md:text-6xl"
       id="introduction"
       ref={containerRef}
     >

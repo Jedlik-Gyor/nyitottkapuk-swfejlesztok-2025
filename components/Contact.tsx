@@ -17,7 +17,7 @@ export default function Contact() {
       >
         <div className="space-y-12">
           <motion.h2
-            className="text-7xl font-bold text-gray-800 dark:text-gray-300"
+            className="text-center text-4xl md:text-6xl font-bold text-gray-800 dark:text-gray-300"
             initial={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             whileInView={{ opacity: 1, x: 0 }}

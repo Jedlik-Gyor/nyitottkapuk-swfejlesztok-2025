@@ -84,7 +84,7 @@ export default function KeyMetrics() {
       }}
     >
       <motion.h2 variants={fadeInUp}>
-        <p className="text-center text-6xl font-bold text-gray-800/30 md:text-6xl dark:text-purple-300/80">
+        <p className="text-center text-4xl md:text-6xl font-bold text-gray-800/30 dark:text-purple-300/80">
           Mihez ért egy végzett Jedlikes?
         </p>
       </motion.h2>
@@ -98,7 +98,7 @@ export default function KeyMetrics() {
             variants={fadeInUp}
             whileHover={{ scale: 1.05 }}
           >
-            <h3 className="mb-4 text-5xl font-bold text-blue-500/60 dark:text-purple-300/60">
+            <h3 className="mb-4 text-3xl md:text-5xl font-bold text-blue-500/60 dark:text-purple-300/60">
               {metric.value}
             </h3>
             <p className="mb-2 text-2xl text-black dark:text-white">{metric.label}</p>

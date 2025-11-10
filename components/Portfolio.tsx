@@ -58,7 +58,7 @@ const Portfolio = () => {
 
   return (
     <div className="container mx-auto px-4 py-20 text-gray-900 dark:text-white" id="portfolio">
-      <h2 className="mb-16 text-center text-6xl font-bold">
+      <h2 className="mb-16 text-center text-4xl md:text-6xl font-bold">
         Tavalyi <span className="text-blue-500 dark:text-purple-300/60">záródolgozatok</span>
       </h2>
 
@@ -77,7 +77,7 @@ const Portfolio = () => {
               layout="position"
               onClick={() => toggleExpand(index)}
             >
-              <h3 className="text-4xl font-semibold text-gray-900 dark:text-white">
+              <h3 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-white">
                 {project.title}
               </h3>
               <div className="flex items-center space-x-4">
