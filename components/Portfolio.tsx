@@ -15,7 +15,7 @@ type Project = {
   devstack: string;
   link: string;
   git: string;
-  src: StaticImageData;
+  src: StaticImageData | string;
   type: "fullstack" | "frontend";
 };
 
@@ -24,7 +24,7 @@ const projects: Project[] = [
     title: "Éttermi rendeléskezelő alkalmazás",
     desc: "A Inner Peace Restaurant egy vendégek és az étterem dolgozói közötti rendszer. A vendégek az alkalmazáson keresztül leadhatják rendeléseiket, amelyeket az étterem dolgozói valós időben láthatnak és kezelhetnek. Az alkalmazás célja a rendelési folyamat egyszerűsítése és a vendégélmény javítása.",
     devstack: "MySql, Nuxt.js, Laravel, MAUI, Docker, Figma",
-    link: "#",
+    link: "https://innerpeace.jedlik.cloud/innerpeace/hu/fooldal",
     git: "#",
     src: proj1,
     type: "fullstack",
@@ -39,12 +39,12 @@ const projects: Project[] = [
     type: "fullstack",
   },
   {
-    title: "Slim Fit Gym Weboldal",
-    desc: "A Slim Fit Gym weboldal egy modern és felhasználóbarát platform, amely bemutatja az edzőterem szolgáltatásait, edzéstervét és árait. Az oldal célja, hogy vonzó legyen a potenciális ügyfelek számára, és megkönnyítse a kapcsolatfelvételt az edzőteremmel.",
+    title: "MoveYourBody fittness alkalmazás",
+    desc: "A MoveYourBody egy fitnesz alkalmazás, amely személyre szabott edzésterveket és táplálkozási tanácsokat kínál a felhasználók számára. Az alkalmazás célja, hogy segítsen az embereknek egészségesebb életmódot kialakítani és fenntartani.",
     devstack: "ASP.NET, Angular, TypeScript, SCSS, Cypress",
-    link: "#",
+    link: "https://moveyourbody.jedlik.cloud",
     git: "#",
-    src: proj3,
+    src: "https://www.youtube.com/watch?v=AAVxq0WvIJU",
     type: "fullstack",
   },
 ];
@@ -156,11 +156,21 @@ const Portfolio = () => {
                         </Link>
                       </div>
                     </div>
-                    <Image
-                      alt={project.title}
-                      className="h-64 w-full rounded-lg object-cover md:w-1/2"
-                      src={project.src}
-                    />
+                    {typeof project.src === "string" ? (
+                      <iframe
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="h-64 w-full rounded-lg md:w-1/2"
+                        src={project.src.replace("watch?v=", "embed/")}
+                        title={project.title}
+                      />
+                    ) : (
+                      <Image
+                        alt={project.title}
+                        className="h-64 w-full rounded-lg object-cover md:w-1/2"
+                        src={project.src}
+                      />
+                    )}
                   </motion.div>
                 </motion.div>
               )}
