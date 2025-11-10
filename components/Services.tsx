@@ -68,7 +68,7 @@ const Services = () => {
                 {service.title}
               </p>
             </div>
-            <p className="pl-20 leading-relaxed text-gray-800 dark:text-gray-400">
+            <p className=" text-lg md:text-xl pl-20 leading-relaxed text-gray-800 dark:text-gray-400">
               <span dangerouslySetInnerHTML={{ __html: service.description }} />
             </p>
           </motion.div>

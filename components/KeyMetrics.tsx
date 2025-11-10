@@ -102,9 +102,9 @@ export default function KeyMetrics() {
               {metric.value}
             </h3>
             <p className="mb-2 text-2xl text-black dark:text-white">{metric.label}</p>
-            <ul className="list-inside list-disc text-left text-sm text-gray-800 dark:text-gray-400">
+            <ul className="list-inside list-disc text-left text-lg md:text-xl text-gray-800 dark:text-gray-400 leading-relaxed">
               {metric.description.map((desc, descIndex) => (
-                <li key={descIndex}>{desc}</li>
+              <li key={descIndex}>{desc}</li>
               ))}
             </ul>
           </motion.div>

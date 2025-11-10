@@ -134,7 +134,7 @@ const Portfolio = () => {
                     initial={{ opacity: 0, y: 10 }}
                   >
                     <div className="max-w-xl flex-1 space-y-4 p-6">
-                      <p className="text-gray-800 dark:text-white/70">{project.desc}</p>
+                      <p className="text-lg md:text-xl text-gray-800 dark:text-white/70">{project.desc}</p>
                       <p className="font-medium text-blue-500 dark:text-purple-300">
                         {project.devstack}
                       </p>
