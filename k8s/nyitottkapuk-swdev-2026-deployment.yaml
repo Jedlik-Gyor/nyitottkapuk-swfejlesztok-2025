@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:0.2.02
+          image: ghcr.io/jedlik-gyor/nyitottkapuk-swdev-2026:0.2.03
           imagePullPolicy: Always
           ports:
             - containerPort: 3000            
