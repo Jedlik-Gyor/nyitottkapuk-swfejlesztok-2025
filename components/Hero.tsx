@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen overflow-x-clip" id="hero">
       <div className="absolute inset-0 z-0 flex flex-col items-center justify-around overflow-hidden md:flex-row">
-        <h1 className="text-center text-[2rem] font-bold whitespace-nowrap text-gray-800/30 transition-colors lg:text-[8rem] dark:text-purple-400/10">
+        <h1 className="text-center text-[2rem] font-bold whitespace-nowrap text-gray-800/30 transition-colors lg:text-[2rem] dark:text-purple-400/10">
           GYŐRI SZC <br />
           JEDLIK ÁNYOS <br />
           TECHNIKUM <br />
@@ -45,7 +45,7 @@ const Hero = () => {
         <Image alt="profile picture" className="relative z-20 mx-auto w-[170px]" src={profilepic} />
         <motion.div
           animate={{
-            rotate: -360,
+            rotate: 360,
           }}
           className="absolute inset-0"
           transition={{
