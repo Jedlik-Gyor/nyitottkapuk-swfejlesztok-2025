@@ -1,6 +1,6 @@
 {
   "name": "next-frontend-starter",
-  "version": "0.2.03",
+  "version": "0.2.04",
   "private": true,
   "scripts": {
     "dev": "next dev -p 8080",
